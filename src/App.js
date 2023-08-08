@@ -1,11 +1,13 @@
-import './App.css';
+import Header from './components/Header.js';
+import Footer from './components/Footer.js';
+import Main from './components/Main.js';
 
 function App() {
 	return (
-		<div className='App'>
-			<header className='App-header'>
-				<h1>Tennis Court Booking Web App</h1>
-			</header>
+		<div className='app'>
+			<Header />
+			<Main />
+			<Footer />
 		</div>
 	);
 }
