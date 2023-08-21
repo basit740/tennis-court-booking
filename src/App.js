@@ -4,7 +4,7 @@ import Footer from "./components/Footer.js";
 // pages
 import Home from "./pages/Home.js";
 import About from "./pages/About.js";
-import Booking from  "./pages/Booking.js";
+import Booking from "./pages/Booking.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
@@ -13,8 +13,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-		<Route path="/about" element={<About />} />
-		<Route path="/Court-Booking" element={<Booking />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/Court-Booking" element={<Booking />} />
       </Routes>
 
       <Footer />

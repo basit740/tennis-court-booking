@@ -5,19 +5,27 @@ function Header() {
     <header className="header">
       <h5>Chancellors Family Center</h5>
       <nav>
-        <ul>
+        <ul className="nav-list">
           <li>
-            <Link to="/">Home</Link>
+            <Link className="nav-link" to="/">
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link className="nav-link" to="/about">
+              About
+            </Link>
           </li>
           <li>
-            <Link to="/contact-us">Contact Us</Link>
+            <Link className="nav-link" to="/contact-us">
+              Contact Us
+            </Link>
           </li>
-		  <li>
-			<Link to="/Court-Booking">Court Booking</Link>
-		  </li>
+          <li>
+            <Link className="nav-link" to="/Court-Booking">
+              Court Booking
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>
