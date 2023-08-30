@@ -20,7 +20,16 @@ app.get('/', function (request, response) {
 	// take like 10 mins
 
 	response.status(200).json({
-		success: true,
 		message: 'Yes, I am from backend',
 	});
 });
+
+app.get('/book', function (request, response) {
+	response.status(200).json({
+		message: 'Tennis court is booked',
+	});
+});
+
+/// 200 - 400
+/// 400 - 499
+/// 500 ->>

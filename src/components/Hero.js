@@ -1,14 +1,20 @@
 import './Hero.css';
 
+import { useState } from 'react';
 function Hero() {
-	const talkToBackend = async (event) => {
-		const response = await fetch('http://localhost:8080/', {
+	const [serverMessage, setServerMessage] = useState('');
+
+	const bookTennisCourt = async (event) => {
+		event.preventDefault();
+		const response = await fetch('http://localhost:8080/book', {
 			method: 'GET',
 		});
 
 		const readableData = await response.json();
 
 		console.log(readableData);
+
+		setServerMessage(readableData.message);
 	};
 	return (
 		<section className='hero'>
@@ -20,9 +26,11 @@ function Hero() {
 						system to book tennis courts so easily.
 					</p>
 
-					<a href='#book' className='cta-button' onClick={talkToBackend}>
+					<a href='#book' className='cta-button' onClick={bookTennisCourt}>
 						Book Now
 					</a>
+
+					<p>{serverMessage}</p>
 				</div>
 
 				<div className='hero__img-wrapper'>
