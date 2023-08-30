@@ -1,11 +1,11 @@
-import Main from "../components/Main.js";
+import Main from '../components/Main.js';
 
 function Home() {
-  return (
-    <div>
-      <Main />
-    </div>
-  );
+	return (
+		<div>
+			<Main />
+		</div>
+	);
 }
 
 export default Home;

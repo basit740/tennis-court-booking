@@ -1,6 +1,15 @@
 import './Hero.css';
 
 function Hero() {
+	const talkToBackend = async (event) => {
+		const response = await fetch('http://localhost:8080/', {
+			method: 'GET',
+		});
+
+		const readableData = await response.json();
+
+		console.log(readableData);
+	};
 	return (
 		<section className='hero'>
 			<div className='hero__content container'>
@@ -11,7 +20,7 @@ function Hero() {
 						system to book tennis courts so easily.
 					</p>
 
-					<a href='#book' className='cta-button'>
+					<a href='#book' className='cta-button' onClick={talkToBackend}>
 						Book Now
 					</a>
 				</div>
